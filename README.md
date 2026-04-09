@@ -19,12 +19,30 @@ Slides and lecture notes are available here:
 
 This project uses [uv](https://docs.astral.sh/uv/) for dependency management.
 
-**Install dependencies and launch JupyterLab:**
+### Installing uv
+
+**macOS / Linux:**
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Windows (PowerShell):**
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+After installation, restart your terminal.
+
+### Install dependencies and launch JupyterLab
 
 ```bash
 uv sync
 uv run jupyter lab
 ```
+
+> **Recommendation:** While JupyterLab/Notebook works fine, we recommend running notebooks inside a full IDE such as [VS Code](https://code.visualstudio.com/), [PyCharm](https://www.jetbrains.com/pycharm/), or [Cursor](https://www.cursor.com/). IDEs provide better code completion, debugging, and Git integration. After running `uv sync`, select the `.venv` environment as your Python interpreter in the IDE.
 
 ## Dependencies
 
