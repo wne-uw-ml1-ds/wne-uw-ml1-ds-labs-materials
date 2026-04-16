@@ -13,7 +13,22 @@ Slides and lecture notes are available here:
 |---|---|
 | `notebooks/knn.ipynb` | K-Nearest Neighbors |
 | `notebooks/svm.ipynb` | Support Vector Machines |
-| `notebooks/core_ml_techniques.ipynb` | Core ML techniques: preprocessing, feature selection, ensembles, model evaluation |
+| `notebooks/linear_and_logistic_regression.ipynb` | Linear and logistic regression (from scratch, scikit-learn, and statsmodels) + regularized variants (Ridge, Lasso, Elastic Net, L1/L2/EN logistic) |
+| `notebooks/core_ml_techniques.ipynb` | Core ML techniques: imputation, feature engineering, regularization, feature selection, class rebalancing, ensembles, calibration, drift, evaluation metrics, CV variants, Bayesian hyperparameter search |
+
+## External Tutorial — Kedro
+
+In addition to the notebooks above, the course covers a project-structuring tutorial
+using the [Kedro](https://kedro.org/) framework. It is a
+Python framework for building production-grade, reproducible data science pipelines
+(data catalog, nodes, pipelines, parameters, experiment tracking).
+
+**Follow the official Spaceflights tutorial:**
+[https://docs.kedro.org/en/stable/tutorials/spaceflights_tutorial/](https://docs.kedro.org/en/stable/tutorials/spaceflights_tutorial/)
+
+By the end of the tutorial you will have built a Kedro project that ingests raw data,
+engineers features, trains a regression model, and reports metrics — all through
+declarative pipeline configuration rather than one-off notebook cells.
 
 ## Setup
 
@@ -88,6 +103,8 @@ Ruff is configured in `pyproject.toml` with:
 - `matplotlib`, `seaborn` – visualization
 - `scikit-learn` – machine learning models and utilities
 - `scipy` – scientific computing
+- `statsmodels` – classical statistical inference (OLS, GLM, p-values, confidence intervals)
+- `scikit-optimize` – Bayesian hyperparameter search (`BayesSearchCV`)
 - `imbalanced-learn` – handling imbalanced datasets
 - `jupyter`, `ipykernel` – notebook environment
 
